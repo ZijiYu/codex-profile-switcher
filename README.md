@@ -185,4 +185,4 @@ CPX also backs up the current active `~/.codex` files before switching profiles.
 
 ## Star History
 
-[View star history on star-history.com](https://star-history.com/#ZijiYu/codex-profile&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=ZijiYu/codex-profile&type=Date)](https://www.star-history.com/?type=date&repos=ZijiYu%2Fcodex-profile)

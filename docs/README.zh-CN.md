@@ -185,4 +185,4 @@ CPX 在切换 profile 前，也会备份当前 active 的 `~/.codex` 文件。
 
 ## Star History
 
-[在 star-history.com 查看](https://star-history.com/#ZijiYu/codex-profile&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=ZijiYu/codex-profile&type=Date)](https://www.star-history.com/?type=date&repos=ZijiYu%2Fcodex-profile)
