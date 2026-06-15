@@ -16,7 +16,7 @@
 ║                                                                ║
 ╚════════════════════════════════════════════════════════════════╝
 
-  Version: 1.0  |  https://github.com/ZijiYu/codex-profiles
+  Version: 1.0.2  |  https://github.com/ZijiYu/codex-profiles
 ```
 
 CPX is a tiny terminal tool for switching Codex profiles, accounts, and API setups fast.

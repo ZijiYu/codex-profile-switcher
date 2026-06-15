@@ -16,7 +16,7 @@
 ║                                                                ║
 ╚════════════════════════════════════════════════════════════════╝
 
-  Version: 1.0  |  https://github.com/ZijiYu/codex-profiles
+  Version: 1.0.2  |  https://github.com/ZijiYu/codex-profiles
 ```
 
 CPX は、Codex の設定をすばやく切り替えるための小さなターミナルツールです。

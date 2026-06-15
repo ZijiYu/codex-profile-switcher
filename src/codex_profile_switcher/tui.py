@@ -20,12 +20,12 @@ LOGO = [
     "║                                                                ║",
     "╚════════════════════════════════════════════════════════════════╝",
     "",
-    "  Version: 1.0  |  https://github.com/ZijiYu/codex-profiles",
+    "  Version: 1.0.2  |  https://github.com/ZijiYu/codex-profiles",
 ]
 
 COMPACT_LOGO = [
     "CPX - Codex Profiles",
-    "Version: 1.0 | https://github.com/ZijiYu/codex-profiles",
+    "Version: 1.0.2 | https://github.com/ZijiYu/codex-profiles",
 ]
 
 

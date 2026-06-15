@@ -16,7 +16,7 @@
 ║                                                                ║
 ╚════════════════════════════════════════════════════════════════╝
 
-  Version: 1.0  |  https://github.com/ZijiYu/codex-profiles
+  Version: 1.0.2  |  https://github.com/ZijiYu/codex-profiles
 ```
 
 CPX 是一个用来快速切换 Codex 配置的小工具。
