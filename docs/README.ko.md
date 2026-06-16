@@ -18,7 +18,7 @@
 ║                                                                ║
 ╚════════════════════════════════════════════════════════════════╝
 
-  Version: 1.0.4  |  https://github.com/ZijiYu/codex-profiles
+  Version: 1.0.4  |  https://github.com/ZijiYu/codex-profile-switcher
 ```
 
 CPS는 Codex 설정을 빠르게 전환하기 위한 작은 터미널 도구입니다.
@@ -251,4 +251,4 @@ CPS는 profile을 전환하기 전에 현재 active 상태인 `~/.codex` 파일�
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=zijiyu%2Fcodex-profiles&type=Date)](https://www.star-history.com/?type=date&repos=ZijiYu%2Fcodex-profiles)
+[![Star History Chart](https://api.star-history.com/svg?repos=ZijiYu%2Fcodex-profile-switcher&type=Date)](https://www.star-history.com/?type=date&repos=ZijiYu%2Fcodex-profile-switcher)

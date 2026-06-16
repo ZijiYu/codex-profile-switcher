@@ -17,6 +17,7 @@ def main() -> None:
     sub.add_parser("status", help="show active config and saved profile structure")
     sub.add_parser("list", help="list saved profiles")
     sub.add_parser("deleted", help="list reversibly deleted profiles")
+    sub.add_parser("doc", help="show full CPS documentation")
     sub.add_parser("restart", help="restart Codex Desktop")
     init = sub.add_parser("init", help="initialize auth, route, or full profile from active ~/.codex")
     init.add_argument("kind_or_profile", metavar="auth|route|full|profile")
@@ -59,6 +60,8 @@ def main() -> None:
     elif command == "deleted":
         for name in store.list_deleted():
             print(name)
+    elif command == "doc":
+        print_doc()
     elif command == "restart":
         code = store.restart_codex()
         print(f"restart Codex exited with {code}")
@@ -134,6 +137,81 @@ def print_status(status) -> None:
     print(f"  api.config.toml: {'yes' if status.api_config_present else 'no'}")
     print(f"  auth.json: {'yes' if status.auth_present else 'no'}")
     print(f"  auth_mode: {status.auth_mode or '-'}")
+
+
+def print_doc() -> None:
+    print(
+        """CPS - Codex Profile Switcher
+
+Purpose:
+  CPS separates Codex auth from model routing, then lets you compose them.
+
+Core idea:
+  Auth profile        -> auth.json / ChatGPT login
+  API / Route profile -> config.toml / provider / model / base_url / API key
+  Apply Selection     -> writes the selected Auth + API / Route into ~/.codex
+
+TUI:
+  cps
+
+Main keys:
+  Up/Down             move in current column
+  Tab or Left/Right   switch Auth / API column
+  Enter               select current item
+  M                   apply selected Auth + API / Route
+  O                   open menu
+  R                   restart Codex
+  ?                   help
+  Q                   quit
+
+Menu:
+  New Auth Login      create an auth profile and run codex login
+  New API Route       create a route-only API profile from a form
+
+Common CLI:
+  cps init auth personal
+  cps init route work
+  cps mix personal work
+  cps restart
+
+Custom API route:
+  cps route custom --base-url URL --model MODEL --api-key KEY
+
+Official route:
+  cps route official --model MODEL
+
+State:
+  ~/.codex                 active Codex config
+  ~/.codex-profiles        saved CPS profiles
+  ~/.codex-profiles/deleted reversible deletes
+  ~/.codex-profiles/backups switch-time backups
+
+Safety:
+  delete is reversible:
+    cps delete <profile>
+    cps deleted
+    cps restore <deleted-profile>
+
+Release notes:
+  1.0.4
+    - Full-screen menu for creation flows
+    - New API Route and New Auth Login forms
+    - Apply Selection wording
+    - Scroll-aware pages for smaller terminals
+    - Safer profile and provider name handling
+
+  1.0.3
+    - Auth and API / Route columns in the TUI
+    - Hybrid composition with cps mix <auth> <route>
+    - Split init auth / init route / init full commands
+    - Route helpers for official and custom API endpoints
+    - Codex restart support
+
+More:
+  cps --help
+  cps status
+"""
+    )
 
 
 def parse_init_args(kind_or_profile: str, profile: str | None) -> tuple[str, str]:
